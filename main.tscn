@@ -1,0 +1,496 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://new_theme.tres" type="Theme" id=2]
+[ext_resource path="res://icons/icon_folder.svg" type="Texture" id=3]
+[ext_resource path="res://new_buttongroup.tres" type="ButtonGroup" id=4]
+[ext_resource path="res://buttongroup.tres" type="ButtonGroup" id=5]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+game_name = "Pixel Zone"
+version = "123456"
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+tab_align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Main" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 29.0
+margin_right = -5.0
+margin_bottom = -5.0
+
+[node name="Label" type="Label" parent="TabContainer/Main"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Welcome to <game_name> <version> installer!
+
+Click 'Next' to begin installation."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="Button" parent="TabContainer/Main"]
+anchor_left = 0.897522
+anchor_top = 0.94472
+anchor_right = 0.980856
+anchor_bottom = 0.987824
+margin_left = 4.444
+margin_top = -1.57611
+margin_right = 4.61032
+margin_bottom = -0.17984
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Next2" type="Button" parent="TabContainer/Main"]
+anchor_left = 0.0102687
+anchor_top = 0.946059
+anchor_right = 0.117412
+anchor_bottom = 0.989163
+margin_left = 0.845113
+margin_top = -2.21616
+margin_right = 1.05918
+margin_bottom = -0.819885
+text = "Cancel"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="License" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 29.0
+margin_right = -5.0
+margin_bottom = -5.0
+
+[node name="Next3" type="Button" parent="TabContainer/License"]
+anchor_left = 0.0102687
+anchor_top = 0.946059
+anchor_right = 0.117412
+anchor_bottom = 0.989163
+margin_left = 0.845113
+margin_top = -2.21616
+margin_right = 1.05918
+margin_bottom = -0.819885
+text = "Cancel"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/License"]
+anchor_left = 0.044
+anchor_top = 0.044
+anchor_right = 1.0
+anchor_bottom = 0.626
+margin_left = -0.0880013
+margin_top = -0.0320015
+margin_right = -19.0
+margin_bottom = -0.228027
+text = "Copyright 2019 Karol Tomaszewski
+
+Pixel Zone - MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/License"]
+margin_left = 9.27258
+margin_top = 380.177
+margin_right = 184.273
+margin_bottom = 402.177
+text = "Do you accet this license?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/License"]
+margin_left = 200.906
+margin_top = 370.904
+margin_right = 250.906
+margin_bottom = 422.904
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="yes" type="CheckBox" parent="TabContainer/License/VBoxContainer"]
+margin_right = 50.0
+margin_bottom = 24.0
+group = ExtResource( 5 )
+text = "Yes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="yes2" type="CheckBox" parent="TabContainer/License/VBoxContainer"]
+margin_top = 28.0
+margin_right = 50.0
+margin_bottom = 52.0
+group = ExtResource( 5 )
+text = "No"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="accept" type="Button" parent="TabContainer/License"]
+margin_left = 455.0
+margin_top = 450.0
+margin_right = 497.0
+margin_bottom = 472.0
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="accept2" type="Button" parent="TabContainer/License"]
+margin_left = 395.0
+margin_top = 450.0
+margin_right = 437.0
+margin_bottom = 472.0
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Configurate" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 29.0
+margin_right = -5.0
+margin_bottom = -5.0
+
+[node name="InstallationPath" type="Control" parent="TabContainer/Configurate"]
+anchor_right = 0.335
+anchor_bottom = 0.118
+margin_left = 7.0
+margin_top = 88.0
+margin_right = 313.83
+margin_bottom = 87.596
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Configurate/InstallationPath"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Select instalation path."
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Configurate/InstallationPath"]
+anchor_left = 0.059
+anchor_top = 0.429
+anchor_right = 0.966
+anchor_bottom = 0.818
+margin_left = -0.0250015
+margin_top = -0.0240021
+margin_right = 0.149994
+margin_bottom = 0.191998
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/Configurate/InstallationPath"]
+margin_left = 465.423
+margin_top = 23.0
+margin_right = 493.423
+margin_bottom = 47.0
+icon = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AddidtionalComponents" type="Control" parent="TabContainer/Configurate"]
+margin_left = -4.06091
+margin_top = -1.58578
+margin_right = 182.939
+margin_bottom = 76.4142
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Configurate/AddidtionalComponents"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Configurate/AddidtionalComponents/VBoxContainer"]
+margin_right = 158.0
+margin_bottom = 22.0
+text = "Additional Components"
+
+[node name="LevelEditor" type="CheckBox" parent="TabContainer/Configurate/AddidtionalComponents/VBoxContainer"]
+margin_top = 26.0
+margin_right = 158.0
+margin_bottom = 50.0
+text = "Level Editor"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelEditor2" type="CheckBox" parent="TabContainer/Configurate/AddidtionalComponents/VBoxContainer"]
+margin_top = 54.0
+margin_right = 158.0
+margin_bottom = 78.0
+disabled = true
+pressed = true
+text = "Leaderboard"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next3" type="Button" parent="TabContainer/Configurate"]
+anchor_left = 0.00746269
+anchor_top = 0.969828
+anchor_right = 0.108209
+anchor_bottom = 1.01293
+margin_left = 2.25373
+margin_top = -13.5778
+margin_right = 5.67908
+margin_bottom = -12.1805
+text = "Cancel"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Next6" type="Button" parent="TabContainer/Configurate"]
+anchor_left = 0.847015
+anchor_top = 0.965517
+anchor_right = 0.925373
+anchor_bottom = 1.00862
+margin_left = 29.7985
+margin_top = -11.5171
+margin_right = 32.4628
+margin_bottom = -10.1203
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Next5" type="Button" parent="TabContainer/Configurate"]
+anchor_left = 0.740388
+anchor_top = 0.965517
+anchor_right = 0.819058
+anchor_bottom = 1.01154
+margin_left = 23.3253
+margin_top = -11.5171
+margin_right = 25.8327
+margin_bottom = -11.5171
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Bits" type="Control" parent="TabContainer/Configurate"]
+margin_left = -2.82841
+margin_top = 154.149
+margin_right = 37.1716
+margin_bottom = 194.149
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Configurate/Bits"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="TabContainer/Configurate/Bits/VBoxContainer"]
+margin_right = 326.0
+margin_bottom = 22.0
+text = "Bits of downloaded game. Recommended 32 bits."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox2" type="CheckBox" parent="TabContainer/Configurate/Bits/VBoxContainer"]
+margin_top = 26.0
+margin_right = 326.0
+margin_bottom = 50.0
+pressed = true
+button_mask = 5
+group = ExtResource( 4 )
+text = "32"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/Configurate/Bits/VBoxContainer"]
+margin_top = 54.0
+margin_right = 326.0
+margin_bottom = 78.0
+group = ExtResource( 4 )
+text = "64"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Download" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 29.0
+margin_right = -5.0
+margin_bottom = -5.0
+drag_to_rearrange_enabled = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Download"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -131.0
+margin_top = -20.0
+margin_right = 131.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Full2" type="ProgressBar" parent="TabContainer/Download/VBoxContainer"]
+margin_right = 262.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Download/VBoxContainer"]
+margin_top = 18.0
+margin_right = 262.0
+margin_bottom = 40.0
+text = "Downloading..."
+align = 1
+valign = 1
+
+[node name="nexttab" type="Button" parent="TabContainer/Download"]
+margin_left = 455.0
+margin_top = 450.0
+margin_right = 497.0
+margin_bottom = 472.0
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="prevtab" type="Button" parent="TabContainer/Download"]
+margin_left = 395.0
+margin_top = 450.0
+margin_right = 437.0
+margin_bottom = 472.0
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="prevtab2" type="Button" parent="TabContainer/Download"]
+margin_left = 6.0
+margin_top = 450.0
+margin_right = 48.0
+margin_bottom = 472.0
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Finish" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 29.0
+margin_right = -5.0
+margin_bottom = -5.0
+
+[node name="Control" type="Control" parent="TabContainer/Finish"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Finish/Control"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -11.0
+margin_bottom = 11.0
+align = 1
+valign = 1
+
+[node name="Next3" type="Button" parent="."]
+anchor_left = 0.851563
+anchor_right = 0.974609
+anchor_bottom = 0.0429688
+text = "Close"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+margin_right = 200.0
+margin_bottom = 70.0
+window_title = "Proszę potwierdzić..."
+dialog_text = "Do you want to abort installation process?"
+
+[node name="FileDialog" type="FileDialog" parent="."]
+margin_right = 378.0
+margin_bottom = 328.0
+window_title = "Otwórz katalog"
+resizable = true
+mode = 2
+access = 2
+show_hidden_files = true
+current_dir = "C:/Users/karol/OneDrive/Dokumenty/Game Installer"
+current_path = "C:/Users/karol/OneDrive/Dokumenty/Game Installer/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequest2" type="HTTPRequest" parent="."]
+[connection signal="pressed" from="TabContainer/Main/Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="TabContainer/Main/Next2" to="." method="_on_Next2_pressed"]
+[connection signal="pressed" from="TabContainer/License/Next3" to="." method="_on_Next2_pressed"]
+[connection signal="pressed" from="TabContainer/License/accept" to="." method="_on_accept_pressed"]
+[connection signal="pressed" from="TabContainer/License/accept2" to="." method="_on_accept2_pressed"]
+[connection signal="pressed" from="TabContainer/Configurate/InstallationPath/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="TabContainer/Configurate/Next3" to="." method="_on_Next2_pressed"]
+[connection signal="pressed" from="TabContainer/Configurate/Next6" to="." method="_on_Next6_pressed"]
+[connection signal="pressed" from="TabContainer/Configurate/Next5" to="." method="_on_Next5_pressed"]
+[connection signal="pressed" from="TabContainer/Download/nexttab" to="." method="_on_nexttab_pressed"]
+[connection signal="pressed" from="TabContainer/Download/prevtab" to="." method="_on_prevtab_pressed"]
+[connection signal="pressed" from="TabContainer/Download/prevtab2" to="." method="_on_prevtab2_pressed"]
+[connection signal="pressed" from="Next3" to="." method="_on_Next2_pressed"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_ConfirmationDialog_confirmed"]
+[connection signal="dir_selected" from="FileDialog" to="." method="_on_FileDialog_dir_selected"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="request_completed" from="HTTPRequest2" to="." method="_on_HTTPRequest2_request_completed"]
